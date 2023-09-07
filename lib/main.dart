@@ -1,3 +1,4 @@
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      theme: ThemeData().copyWith(scaffoldBackgroundColor: kPrimaryColor),
+      home: const SplashScreen(),
     );
   }
 }
