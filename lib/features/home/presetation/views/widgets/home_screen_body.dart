@@ -1,6 +1,6 @@
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'custom_app_bar.dart';
-import 'custom_list_view_item.dart';
 import 'featured_list_view.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -9,11 +9,20 @@ class HomeScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Column(
-        children: [
-          CustomAppBar(),
-          FeaturedBooksListView(),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomAppBar(),
+            FeaturedBooksListView(),
+            SizedBox(height: 20),
+            Text(
+              'Best seller',
+              style: Styles.titleMedium,
+            )
+          ],
+        ),
       ),
     );
   }
