@@ -1,9 +1,6 @@
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../../../core/utils/assets.dart';
 import 'best_seller_list_view.dart';
-import 'best_seller_list_view_item.dart';
 import 'custom_app_bar.dart';
 import 'featured_list_view.dart';
 
@@ -14,6 +11,7 @@ class HomeScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -36,7 +34,7 @@ class HomeScreenBody extends StatelessWidget {
               ],
             ),
           ),
-          SliverFillRemaining(
+          SliverToBoxAdapter(
             child: BestSellerListView(),
           )
         ],
