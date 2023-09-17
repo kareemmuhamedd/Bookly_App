@@ -1,3 +1,4 @@
+import 'package:bookly_app/features/home/presetation/views/book_details_screen.dart';
 import 'package:bookly_app/features/home/presetation/views/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
@@ -18,6 +19,12 @@ abstract class AppRouter{
         path: HomeScreen.routeName,
         builder: (BuildContext context, GoRouterState state) {
           return const HomeScreen();
+        },
+      ),
+      GoRoute(
+        path: BookDetailsScreen.routeName,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BookDetailsScreen();
         },
       ),
     ],
