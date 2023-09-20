@@ -1,10 +1,12 @@
-import 'package:bookly_app/features/home/presetation/views/book_details_screen.dart';
-import 'package:bookly_app/features/home/presetation/views/widgets/rating_book.dart';
+import 'package:bookly_app/features/home_feature/presetation/views/book_details_screen.dart';
+import 'package:bookly_app/features/home_feature/presetation/views/widgets/rating_book.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
+import '../book_details_screen.dart';
+
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(BookDetailsScreen.routeName);
       },
       child: SizedBox(

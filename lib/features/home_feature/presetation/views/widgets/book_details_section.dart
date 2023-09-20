@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/home/presetation/views/widgets/rating_book.dart';
+import 'package:bookly_app/features/home_feature/presetation/views/widgets/rating_book.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
