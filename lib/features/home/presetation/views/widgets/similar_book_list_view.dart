@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'custom_book_image_item.dart';
-class BottomBookDetailsScreenListView extends StatelessWidget {
-  const BottomBookDetailsScreenListView({Key? key}) : super(key: key);
+class SimilarBoxListView extends StatelessWidget {
+  const SimilarBoxListView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
