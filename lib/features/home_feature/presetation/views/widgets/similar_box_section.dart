@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
 import 'similar_book_list_view.dart';
+
 class SimilarBoxSection extends StatelessWidget {
   const SimilarBoxSection({Key? key}) : super(key: key);
 
@@ -10,7 +11,6 @@ class SimilarBoxSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         Text(
           'You can also like',
           style: Styles.titleNormal14.copyWith(
@@ -21,7 +21,6 @@ class SimilarBoxSection extends StatelessWidget {
           height: 16,
         ),
         const SimilarBoxListView(),
-
       ],
     );
   }

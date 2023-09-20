@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'box_action.dart';
 import 'custom_book_image_item.dart';
+
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({Key? key}) : super(key: key);
 
@@ -19,7 +20,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 43,
         ),
-         const Text(
+        const Text(
           'The Jungle Book',
           style: Styles.titleNormal30,
         ),
