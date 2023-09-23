@@ -17,7 +17,7 @@ class SimilarBoxListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(horizontal: 5),
-              child: CustomBookImageItem(),
+              child: CustomBookImageItem(imageUrl: 'https://www.itl.cat/pngfile/big/206-2063899_cute-kitten-images-hd.jpg'),
             );
           }),
     );

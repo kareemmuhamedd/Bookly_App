@@ -20,11 +20,16 @@ class FeaturedBooksListView extends StatelessWidget {
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: 20,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(top: 15, bottom: 22, right: 15),
-                  child: CustomBookImageItem(),
+                return Padding(
+                  padding:
+                      const EdgeInsets.only(top: 15, bottom: 22, right: 15),
+                  child: CustomBookImageItem(
+                    imageUrl:
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            '',
+                  ),
                 );
               },
             ),
