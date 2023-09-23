@@ -17,10 +17,12 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     Either<Failure, List<BookModel>> result =
         await homeRepo.fetchFeaturedBooks();
     return result.fold(
-      (failure) {
+      // this is the left side 'ERROR'
+      (Failure failure) {
         emit(FeaturedBooksFailure(failure.messageError));
       },
-      (books) {
+      // this is the write side 'SUCCESS'
+      (List<BookModel> books) {
         emit(FeaturedBooksSuccess(books));
       },
     );
