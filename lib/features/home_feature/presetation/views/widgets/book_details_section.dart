@@ -15,7 +15,9 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: size.width * 0.2),
-          child: const CustomBookImageItem(imageUrl: 'https://www.itl.cat/pngfile/big/206-2063899_cute-kitten-images-hd.jpg'),
+          child: const CustomBookImageItem(
+              imageUrl:
+                  'https://www.itl.cat/pngfile/big/206-2063899_cute-kitten-images-hd.jpg'),
         ),
         const SizedBox(
           height: 43,
@@ -40,8 +42,10 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 18,
         ),
-        const BookRating(
+        BookRating(
           mainAxisAlignment: MainAxisAlignment.center,
+          rating: 1.5,
+          count: 55,
         ),
         const SizedBox(height: 37),
         const BoxAction(),

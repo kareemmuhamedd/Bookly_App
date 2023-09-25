@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => NewestBooksCubit(
             gitIt.get<HomeRepoImplementation>(),
-          ),
+          )..fetchNewestBooks(),
         )
       ],
       child: MaterialApp.router(
